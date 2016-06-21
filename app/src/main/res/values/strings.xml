@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">GeoFinA</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    //MapBox API Declaration with AccessToken and Styles
+
+    <string name="accessToken">pk.eyJ1IjoiYWxiZXJ0ZW1yb24iLCJhIjoiS2o3amhoayJ9.6xg5FAT0xTHYkjYjguCi9w</string>
+    <string name="style_mapbox_api">mapbox://styles/albertemron/cipmf0fub000tdem6kkgwgtpd</string>
+</resources>
