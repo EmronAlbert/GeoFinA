@@ -85,9 +85,11 @@ public class MembersActivity extends AppCompatActivity implements
 
             if (id == R.id.nav_map) {
                 // Handle the camera action
+            } else if (id == R.id.nav_members) {
+
             } else if (id == R.id.nav_notes) {
 
-            } else if (id == R.id.nav_members) {
+            } else if (id == R.id.nav_sessions) {
 
             } else if (id == R.id.nav_manage) {
 

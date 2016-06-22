@@ -14,7 +14,7 @@
     tools:context=".MapActivity"
     tools:showIn="@layout/app_bar_map">
 
-    <com.mapbox.mapboxsdk.maps.MapView
+    <!--<com.mapbox.mapboxsdk.maps.MapView
         android:id="@+id/mapview"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
@@ -23,6 +23,12 @@
         mapbox:center_longitude="32.577210"
         mapbox:zoom="12"
         mapbox:tilt="20"
-        mapbox:access_token="@string/accessToken"/>
+        mapbox:access_token="@string/accessToken"/> -->
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/ic_map"
+        android:scaleType="fitXY"/>
 
 </RelativeLayout>

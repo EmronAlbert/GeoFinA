@@ -1,9 +1,7 @@
 package com.emronalbert.geofina;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
-import android.support.design.widget.Snackbar;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -11,24 +9,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-
-import com.mapbox.mapboxsdk.maps.MapView;
-import com.mapbox.mapboxsdk.maps.MapboxMap;
-import com.mapbox.mapboxsdk.maps.OnMapReadyCallback;
 
 /**
- * Created by Administrator on 6/20/2016.
+ * Created by Administrator on 6/22/2016.
  */
-public class MapActivity extends AppCompatActivity implements
+public class NotesActivity extends AppCompatActivity implements
         NavigationView.OnNavigationItemSelectedListener {
-
-    private MapView mapView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_map);
+        setContentView(R.layout.activity_notes);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -40,42 +31,8 @@ public class MapActivity extends AppCompatActivity implements
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+    }
 
-        // Create a mapView
-        mapView = (MapView) findViewById(R.id.mapview);
-        mapView.onCreate(savedInstanceState);
-        mapView.getMapAsync(new OnMapReadyCallback() {
-            @Override
-            public void onMapReady(MapboxMap mapboxMap) {
-                // Customize map with markers, Polylines etc.
-            }
-        });
-    }
-    @Override
-    public void onResume() {
-        super.onResume();
-        mapView.onResume();
-    }
-    @Override
-    public void onPause() {
-        super.onPause();
-        mapView.onPause();
-    }
-    @Override
-    public void onSaveInstanceState(Bundle outState) {
-        super.onSaveInstanceState(outState);
-        mapView.onSaveInstanceState(outState);
-    }
-    @Override
-    public void onLowMemory() {
-        super.onLowMemory();
-        mapView.onLowMemory();
-    }
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        mapView.onDestroy();
-    }
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -104,7 +61,6 @@ public class MapActivity extends AppCompatActivity implements
         if (id == R.id.action_settings) {
             return true;
         }
-
         return super.onOptionsItemSelected(item);
     }
 
@@ -116,6 +72,7 @@ public class MapActivity extends AppCompatActivity implements
 
         if (id == R.id.nav_map) {
             // Handle the camera action
+
         } else if (id == R.id.nav_members) {
 
         } else if (id == R.id.nav_notes) {
